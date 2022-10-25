@@ -8,6 +8,9 @@ import Main from '../layout/Main'
 import Profile from '../components/Profile'
 import PrivateRoute from './PrivateRoute'
 import Courses from '../components/Courses'
+import Toggle from '../components/Toggle'
+import Faq from '../components/Faq'
+import Blog from '../components/Blog'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +27,18 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path:'/faq',
+        element:<Faq></Faq>
+      },
+      {
+          path:'/blog',
+          element:<Blog></Blog>
+      },
+      {
+      path:'/toggle',
+      element:<Toggle></Toggle>
+      },
+      {
         path: '/login',
         element: <Login />,
       },
@@ -35,7 +50,7 @@ const router = createBrowserRouter([
         path: '/courses',
         element: (
           <PrivateRoute>
-            {/* <Wallet /> */}
+           
             <Courses></Courses>
           </PrivateRoute>
         ),
