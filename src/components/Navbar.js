@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { AuthContext } from '../contexts/UserContext'
+import "./Navbar.css"
 
 const Navbar = () => {
   const { user, logout } = useContext(AuthContext)
@@ -14,7 +15,7 @@ const Navbar = () => {
 
   console.log(user)
   return (
-    <header className='text-gray-600 body-font'>
+    <header className='text-gray-600 body-font nav-body'>
       <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
         <Link
           to='/'
@@ -30,23 +31,24 @@ const Navbar = () => {
             </button>
         
         <nav className='md:ml-auto flex flex-wrap items-center text-base justify-center'>
-          <Link to='/home' className='mr-5 hover:text-gray-900'>
+          <Link to='/home' className='mr-5 hover:text-gray-900 font-bold'>
             Home
           </Link>
 
           {user?.email ? (
             <>
-              <Link to='/profile' className='mr-5 hover:text-gray-900'>
-                Profile
-              </Link>
-              <Link to='/courses' className='mr-5 hover:text-gray-900'>
+             
+              <Link to='/courses' className='mr-5 hover:text-gray-900 font-bold'>
                 Courses
               </Link>
-              <Link to='/faq' className='mr-5 hover:text-gray-900'>
+              <Link to='/faq' className='mr-5 hover:text-gray-900 font-bold'>
                 FAQ
               </Link>
-              <Link to='/blog' className='mr-5 hover:text-gray-900'>
+              <Link to='/blog' className='mr-5 hover:text-gray-900 font-bold'>
                 Blog
+              </Link>
+              <Link to='/profile' className=' text-red-700 mr-5 hover:text-blue-900 font-bold border-2 p-2'>
+                {user.displayName}
               </Link>
               <button
                 onClick={handleLogout}

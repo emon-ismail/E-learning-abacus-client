@@ -15,7 +15,7 @@ const Profile = () => {
               <div className='relative flex-shrink-0'>
                 <span className='absolute bottom-1 right-1 w-4 h-4 bg-green-600 border rounded-full text-gray-100 border-gray-900'></span>
                 <img
-                  src={user?.photoURL ? user.photoURL : avatarImg}
+                  src={user?.photoURL ? user.photoURL : "profile.webp"}
                   referrerPolicy='no-referrer'
                   alt=''
                   className=' border w-32 h-32 rounded-full bg-gray-500 border-gray-700'
