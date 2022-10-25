@@ -1,13 +1,15 @@
 import React, { useContext } from 'react'
 
+
 import avatarImg from '../assets/avatar.jpeg'
 import { AuthContext } from '../contexts/UserContext'
+import "./Profile.css"
 
 const Profile = () => {
   const { user } = useContext(AuthContext)
 
   return (
-    <div className='flex justify-center mt-20'>
+    <div className='flex justify-center mt-10 profile-body'>
       <div className='max-w-lg p-8 sm:flex sm:space-x-6 bg-gray-100 text-gray-900'>
         <div className='flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0'>
           <div className='flex flex-col items-center justify-center'>

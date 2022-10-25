@@ -26,9 +26,13 @@ const Navbar = () => {
           <span className='ml-3 text-xl'>Abacus Academy</span>
          
         </Link>
-         <button    className='inline-flex items-center bg-gray-300 border-0 py-1 px-3 ml-7 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0'>
-            <Link to='/toggle'>Dark mode</Link>
+         <button  
+           className='inline-flex items-center bg-gray-300 border-0 py-1 px-3 ml-7 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0'
+           >
+            
+            <Link to='/toggle'><input type="checkbox" class="toggle" checked /></Link>
             </button>
+            
       
      
             <Link to='/blog' className='ml-7 hover:text-gray-900 font-bold'>
@@ -51,7 +55,7 @@ const Navbar = () => {
                 FAQ
               </Link>
               
-              <Link to='/profile' className=' text-red-700 mr-5 hover:text-blue-900 font-bold border-2 p-2'>
+              <Link to='/profile' className=' text-stone-50 mr-5 hover:text-blue-900 font-bold border-2 p-2'>
                 {user.displayName}
               </Link>
               <button
