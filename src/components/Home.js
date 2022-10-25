@@ -12,8 +12,7 @@ const Home = () => {
             Welcome To Abacus Academy
           </h1>
           <p className='mt-6 mb-8 text-lg sm:mb-12 xl:max-w-3xl text-gray-900'>
-            Here, an user can authenticate using google or create an account
-            using email password. Powered by Firebase.!
+          welcome
           </p>
           <div className='flex flex-wrap justify-center'>
             {user && user.uid ? (
