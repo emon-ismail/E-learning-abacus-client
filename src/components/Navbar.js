@@ -15,7 +15,7 @@ const Navbar = () => {
 
   console.log(user)
   return (
-    <header className='text-gray-600 body-font nav-body'>
+    <header className='text-gray-600 body-font nav-body '>
       <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
         <Link
           to='/'
@@ -26,9 +26,15 @@ const Navbar = () => {
           <span className='ml-3 text-xl'>Abacus Academy</span>
          
         </Link>
-         <button    className='inline-flex items-center bg-gray-300 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0'>
+         <button    className='inline-flex items-center bg-gray-300 border-0 py-1 px-3 ml-7 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0'>
             <Link to='/toggle'>Dark mode</Link>
             </button>
+      
+     
+            <Link to='/blog' className='ml-7 hover:text-gray-900 font-bold'>
+                Blog
+              </Link>
+
         
         <nav className='md:ml-auto flex flex-wrap items-center text-base justify-center'>
           <Link to='/home' className='mr-5 hover:text-gray-900 font-bold'>
@@ -44,9 +50,7 @@ const Navbar = () => {
               <Link to='/faq' className='mr-5 hover:text-gray-900 font-bold'>
                 FAQ
               </Link>
-              <Link to='/blog' className='mr-5 hover:text-gray-900 font-bold'>
-                Blog
-              </Link>
+              
               <Link to='/profile' className=' text-red-700 mr-5 hover:text-blue-900 font-bold border-2 p-2'>
                 {user.displayName}
               </Link>
