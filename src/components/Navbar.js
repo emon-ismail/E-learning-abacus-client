@@ -44,13 +44,14 @@ const Navbar = () => {
           <Link to='/home' className='mr-5 hover:text-gray-900 font-bold'>
             Home
           </Link>
+          <Link to='/courses' className='mr-5 hover:text-gray-900 font-bold'>
+                Courses
+              </Link>
 
           {user?.email ? (
             <>
              
-              <Link to='/courses' className='mr-5 hover:text-gray-900 font-bold'>
-                Courses
-              </Link>
+          
               <Link to='/faq' className='mr-5 hover:text-gray-900 font-bold'>
                 FAQ
               </Link>

@@ -11,6 +11,7 @@ import Courses from '../components/Courses'
 import Toggle from '../components/Toggle'
 import Faq from '../components/Faq'
 import Blog from '../components/Blog'
+import Topic from '../components/Topic'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/home',
         element: <Home />,
+      },
+      {
+path:'/topic',
+element:<Topic></Topic>
       },
       {
         path:'/faq',

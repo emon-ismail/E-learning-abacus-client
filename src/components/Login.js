@@ -7,14 +7,14 @@ import './Login.css'
 
 const Login = () => {
   const [userEmail, setUserEmail] = useState('')
-  const githubProvider = new GithubAuthProvider();
+ 
   const [user, setUser] = useState({});
   // const [showPass, setShowPass] = useState(false)
   const navigate = useNavigate()
   const location = useLocation()
   const from = location.state?.from?.pathname || '/'
 
-  const { signin, resetPassword, signInWithGoogle,signInWithPopup } = useContext(AuthContext)
+  const { signin, resetPassword, signInWithGoogle,signInWithPopup,signWithGithub } = useContext(AuthContext)
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -39,19 +39,12 @@ const Login = () => {
     })
   }
   const handleGithubSignin=()=>{
-    // signInWithPopup().then(result=>{
-    //   console.log(result.user)
-    //   navigate(from, { replace: true })
-    // })
-    signInWithPopup(GithubAuthProvider, githubProvider)
-      .then((result) => {
-        const user = result.user;
-        setUser(user);
-        console.log(user);
-      })
-      .catch((error) => {
-        console.log("error ", error);
-      });
+  
+    signWithGithub().then(result=>{
+      console.log(result.user)
+    navigate(from, { replace: true })
+    })
+
   }
 
   //Reset Pass
