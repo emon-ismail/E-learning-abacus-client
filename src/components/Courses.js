@@ -14,7 +14,7 @@ const Courses = () => {
 
   
   useEffect(()=>{
-      fetch('http://localhost:5000/topics')
+      fetch('https://abacus-academy-server.vercel.app/topics')
       .then(res => res.json())
       .then(data=>setTopics(data))
     },[])
@@ -30,7 +30,7 @@ const Courses = () => {
           <div>
                 {
                     topics.map(topic=> <p key={topic.id}>
-                        <button onClick={()=>setTopicid(topic.id)}> {topic.name} </button>
+                       <h1 className='topic'> <button onClick={()=>setTopicid(topic.id)}><h1 className=''> {topic.name} </h1></button></h1>
 
                     {/* <Link to={`/topics/${topic.id}`}>{topic.name}</Link> */}
                     </p>)

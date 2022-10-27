@@ -1,18 +1,19 @@
 import React from 'react';
+import './Blog.css'
 
 const Blog = () => {
     return (
-        <div>
-           <div className="hero  bg-base-200">
+        <div className='blog-body'>
+         <div className="blog-body'">  <div className="hero  bg-base-200 ">
   <div className="hero-content flex-col lg:flex-row">
-    <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />
+    <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl " />
     <div>
-      <h1 className="text-3xl font-bold">What is cors?</h1>
+      <h1 className="text-3xl font-bold ">What is cors?</h1>
       <h3 className="py-6 text-2xl ">CORS is a node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.</h3>
      
     </div>
   </div>
-</div>
+</div></div>
 <br />
            <div className="hero  bg-base-200">
   <div className="hero-content flex-col lg:flex-row">
