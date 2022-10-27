@@ -33,12 +33,12 @@ const {category_id}=topic
   </figure>
   <div  className="card-body items-center text-center ">
     <h2 className="card-title">{top.title}</h2>
-    {/* <p>   {top.details}</p> */}
+
     <div className="card-actions">
-      {/* <button className="btn btn-primary"  > */}
-        <Link to={`/details/${top._id}`} >Checkout
-          </Link> 
-      {/* <ReactPrint trigger={()=><button>Print</button>} content={()=>ref.current}  /> */}
+
+        <div className='btn btn-primary'><Link to={`/details/${top._id}`} >Checkout
+          </Link> </div>
+     
     </div>
   </div>
 </div>
