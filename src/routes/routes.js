@@ -30,7 +30,12 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+// path:'/topic/${category_id}`',
+
 path:'/topic',
+loader:async({params})=>{
+    return fetch(`http://localhost:5000/${params.name}`)
+},
 element:<Topic></Topic>
       },
       {

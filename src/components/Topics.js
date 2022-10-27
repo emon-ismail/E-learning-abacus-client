@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Topics.css'
+import ReactPrint from 'react-to-print'
+import {useRef} from 'react';
 
 const Topics = ({topicid}) => {
     const [topic,setTopic]= useState([])
+    const ref=useRef()
     
     useEffect(()=>{
         fetch(`https://abacus-academy-server.vercel.app/course/${topicid}`)
@@ -19,19 +22,22 @@ const {category_id}=topic
             <div>
             <h1 className='Topics'> Topics : {topic?.length}</h1> 
           
-            {
+            { 
                 topic?.map(top=>
-                     (   <div>
+                     (   <div >
  
- <div className="card w-96 bg-base-100 shadow-xl my-5 card">
+ <div   className="card w-96 bg-base-100 shadow-xl my-5 card">
   <figure className="px-10 pt-10">
     <img src={top.image_url} alt="Shoes" className="rounded-xl" />
   </figure>
-  <div className="card-body items-center text-center">
+  <div  className="card-body items-center text-center ">
     <h2 className="card-title">{top.title}</h2>
-    <p></p>
+    {/* <p>   {top.details}</p> */}
     <div className="card-actions">
-      <button className="btn btn-primary"  ><Link to={`/topic/${category_id}`}></Link> Checkout</button>
+      <button className="btn btn-primary"  >
+        <Link to={`/topic/${category_id}`}>
+          </Link> Checkout</button>
+      {/* <ReactPrint trigger={()=><button>Print</button>} content={()=>ref.current}  /> */}
     </div>
   </div>
 </div>
