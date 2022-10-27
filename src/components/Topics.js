@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Topics.css'
 import ReactPrint from 'react-to-print'
 import {useRef} from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const Topics = ({topicid}) => {
     const [topic,setTopic]= useState([])
@@ -34,9 +35,9 @@ const {category_id}=topic
     <h2 className="card-title">{top.title}</h2>
     {/* <p>   {top.details}</p> */}
     <div className="card-actions">
-      <button className="btn btn-primary"  >
-        <Link to={`/topic/${category_id}`}>
-          </Link> Checkout</button>
+      {/* <button className="btn btn-primary"  > */}
+        <Link to={`/details/${top._id}`} >Checkout
+          </Link> 
       {/* <ReactPrint trigger={()=><button>Print</button>} content={()=>ref.current}  /> */}
     </div>
   </div>

@@ -3,9 +3,10 @@ import ReactPrint from 'react-to-print'
 import {useRef} from 'react';
 import { useLoaderData } from 'react-router-dom';
 
-const Topic = () => {
-const detailsTopic=useLoaderData()
-const {title,image_url,details}=detailsTopic;
+const TopicDetails = () => {
+  const topic = useLoaderData();
+
+  const { image_url, title, details } = topic;
 
 
 
@@ -35,10 +36,10 @@ const {title,image_url,details}=detailsTopic;
              
            </div>
 
-           {/* <ReactPrint trigger={()=><button>Print</button>} content={()=>ref.current}  /> */}
+     
         </div>
        
     );
 };
 
-export default Topic;
+export default TopicDetails;

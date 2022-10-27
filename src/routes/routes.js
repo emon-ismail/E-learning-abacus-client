@@ -11,7 +11,8 @@ import Courses from '../components/Courses'
 import Toggle from '../components/Toggle'
 import Faq from '../components/Faq'
 import Blog from '../components/Blog'
-import Topic from '../components/Topic'
+import Topic from '../components/TopicDetails'
+import TopicDetails from '../components/TopicDetails'
 
 const router = createBrowserRouter([
   {
@@ -29,15 +30,15 @@ const router = createBrowserRouter([
         path: '/home',
         element: <Home />,
       },
-      {
+      
 // path:'/topic/${category_id}`',
 
-path:'/topic',
-loader:async({params})=>{
-    return fetch(`http://localhost:5000/${params.name}`)
-},
-element:<Topic></Topic>
-      },
+{
+  path:'/details/:id',
+  element : <TopicDetails></TopicDetails>,
+  loader : ({params}) => fetch(`https://abacus-academy-server.vercel.app/topicsDetails/${params.id}`)
+            },
+
       {
         path:'/faq',
         element:<Faq></Faq>
